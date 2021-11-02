@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class House extends Location implements Comparable<House>{
+public class House extends Location implements Comparable<House>, Habitable{
 	private static final int MINIUMUM_VALID_ID = 100;
 	private static final double MINIUMUM_VALID_AREA = 1.0;
 	private Integer id;
@@ -64,6 +64,12 @@ public class House extends Location implements Comparable<House>{
 	@Override
 	public Double calculatePropertyTax(Double taxRate) {
 		return calculateValue() * taxRate;
+	}
+
+	@Override
+	public boolean isHabitable() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 	
