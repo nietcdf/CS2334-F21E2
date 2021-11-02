@@ -8,6 +8,4 @@ public class HouseAgeComparator implements Comparator<House>{
 		return ((House)o1).getBuildOn().compareTo( ((House)o2).getBuildOn());
 		//return 0;
 	}
-
-
 }

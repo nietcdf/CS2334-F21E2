@@ -82,8 +82,12 @@ public class Driver {
 			
 			Collections.sort(list, new HouseAgeComparator());
 			
-			System.out.println("======");
+			System.out.println("====== by age");
 			list.forEach(h -> System.out.println(h));
+			
+			Collections.sort(list, new HouseTaxValueComparator());
+			System.out.println("====== by tax");
+			list.forEach(h -> System.out.println(h.calculatePropertyTax(10.0)));
 			
 		} catch (InvalidIdException e) {
 			System.out.println(e);
